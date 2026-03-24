@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-dark">
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">Wolf</div>
+      <button class="theme-toggle" type="button" aria-label="Przełącz motyw">
+        <span class="theme-toggle__label">Dark</span>
+      </button>
+    </header>
+
+    <main class="dashboard">
+      <section class="hero-panel">
+        <p class="eyebrow">Kaer Morhen</p>
+        <h1 class="clock" aria-live="polite" data-clock>00:00</h1>
+        <p class="date" aria-live="polite" data-date>Poniedziałek, 1 stycznia</p>
+
+        <form class="search-panel" action="https://www.google.com/search" method="get">
+          <label class="sr-only" for="search-input">Szukaj w Google</label>
+          <input id="search-input" name="q" type="search" placeholder="Szukaj śladów, potworów i wiedzy..." autocomplete="off">
+          <button type="submit">Szukaj</button>
+        </form>
+      </section>
+
+      <section class="links-panel" aria-labelledby="links-title">
+        <div class="section-heading">
+          <p class="panel-kicker">Top links</p>
+          <h2 id="links-title">Szlaki i kontakty</h2>
+        </div>
+
+        <div class="links-grid">
+          <a class="link-tile" href="https://www.google.com" target="_blank" rel="noreferrer">
+            <span class="link-tile__icon">G</span>
+            <span class="link-tile__label">Google</span>
+          </a>
+          <a class="link-tile" href="https://www.youtube.com" target="_blank" rel="noreferrer">
+            <span class="link-tile__icon">Y</span>
+            <span class="link-tile__label">YouTube</span>
+          </a>
+          <a class="link-tile" href="https://github.com" target="_blank" rel="noreferrer">
+            <span class="link-tile__icon">GH</span>
+            <span class="link-tile__label">GitHub</span>
+          </a>
+          <a class="link-tile" href="https://mail.google.com" target="_blank" rel="noreferrer">
+            <span class="link-tile__icon">M</span>
+            <span class="link-tile__label">Mail</span>
+          </a>
+          <a class="link-tile" href="https://calendar.google.com" target="_blank" rel="noreferrer">
+            <span class="link-tile__icon">C</span>
+            <span class="link-tile__label">Kalendarz</span>
+          </a>
+          <a class="link-tile" href="https://open.spotify.com" target="_blank" rel="noreferrer">
+            <span class="link-tile__icon">S</span>
+            <span class="link-tile__label">Spotify</span>
+          </a>
+        </div>
+      </section>
+
+      <aside class="weather-panel" aria-labelledby="weather-title">
+        <p class="panel-kicker">Pogoda</p>
+        <h2 id="weather-title" data-weather-location>Biały Sad</h2>
+        <div class="weather-main">
+          <strong data-weather-temp>12°C</strong>
+          <span data-weather-condition>Zachmurzenie umiarkowane</span>
+        </div>
+        <dl class="weather-stats">
+          <div>
+            <dt>Wiatr</dt>
+            <dd data-weather-wind>14 km/h</dd>
+          </div>
+          <div>
+            <dt>Wilgotność</dt>
+            <dd data-weather-humidity>72%</dd>
+          </div>
+          <div>
+            <dt>Opady</dt>
+            <dd data-weather-rain>10%</dd>
+          </div>
+        </dl>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
